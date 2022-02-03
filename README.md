@@ -1,7 +1,7 @@
 # Leitor de MP3 Python
 [![NPM](http://img.shields.io/npm/l/react)](https://github.com/MayconCoutinho/Leitor_de_MP3_Python/blob/main/LICENSE)
 ## Projeto feito 100% em Python:
-![Mobile 1](https://github.com/MayconCoutinho/Leitor_de_MP3_Python/blob/main/Leitor_de_Musica_em_Python.png)
+![Mobile 1](https://github.com/MayconCoutinho/Leitor_de_MP3_Python/blob/main/Anima%C3%A7%C3%A3o.gif)
 
 
 
