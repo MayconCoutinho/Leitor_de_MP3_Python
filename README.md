@@ -12,7 +12,7 @@
   
   from tkinter.ttk import *               # Interface gráfica
   from tkinter import *                   # Interface gráfica
-  from PIL import Image, ImageTk          # Imagens do programa
+  from PIL import Image, ImageTk          # Imagens ".png" e ".jpg"
   from matplotlib.pyplot import text      # Tempo da musica 
   import pygame                           # Leitura do som MP3
   from pygame import mixer                # Leitura do som MP3
