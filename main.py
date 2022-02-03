@@ -506,7 +506,7 @@ b_musica_aleatoria = Button(root, image=photo_musica_aleatoria, cursor='hand2', 
 b_volume_aumenta = Button(root, image= photo_volume_aumenta, cursor='hand2', border=0 ,bg="black")
 b_volume_diminui = Button(root, image= photo_volume_diminui, cursor='hand2', border=0 ,bg="black")
 
-# Button Localização 
+###################################### Button Localização ######################################
 
 b_play.place(x=130, y=350)
 b_passa.place(x=185, y=350)
