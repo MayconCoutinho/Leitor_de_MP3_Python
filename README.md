@@ -22,6 +22,10 @@
   
 ```
 
+# OBS:
+  - Caso não exista uma capa da musica que esta sendo tocada, na pasta imagem, a capa da musica será uma "capa generica". Para adicionar capas as musica bastar adicionar uma imagem .jpg com o mesmo nome da musica. 
+ 
+
 # Autor 
 
 Maycon Coutinho Gomes Miguel 
