@@ -1,17 +1,24 @@
-# 🎧 Leitor de MP3 Python
----
+
+&nbsp;
+ 
+***<h1 align="center"> 🎧 Leitor de MP3 Python </h1>***
+
+&nbsp;
+
 [![NPM](http://img.shields.io/npm/l/react)](https://github.com/MayconCoutinho/Leitor_de_MP3_Python/blob/main/LICENSE)
 
 
-## Projeto feito 100% em Python:<img align="center" alt="Maycon-Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
+##  ➥ ***Projeto feito 100% em Python:***
 
----
+&nbsp;
+
 ![Mobile 1](https://github.com/MayconCoutinho/Leitor_de_MP3_Python/blob/main/Anima%C3%A7%C3%A3o.gif)
 
----
+&nbsp;
 
 
-  ### Todos os importes
+
+  ### ➥ *Todos os importes*
   
   ```python
   
@@ -27,12 +34,14 @@
   
 ```
 
----
+&nbsp;
+
 
 # 📌 OBS:
   - Caso não exista uma capa da musica que esta sendo tocada, na pasta imagem, a capa da musica será uma "capa generica". Para adicionar capas as musica bastar adicionar uma imagem ".jpg" com o mesmo nome da musica. 
 
----
+&nbsp;
+
 
 # 👨🏼‍💻 Autor 
 
@@ -40,4 +49,5 @@ Maycon Coutinho Gomes Miguel
 
 https://www.linkedin.com/in/maycon-coutinho/
 
----
+&nbsp;
+
