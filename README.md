@@ -5,14 +5,18 @@
 
 &nbsp;
 
-[![NPM](http://img.shields.io/npm/l/react)](https://github.com/MayconCoutinho/Leitor_de_MP3_Python/blob/main/LICENSE)
+
 
 
 ##  ➥ ***Projeto feito 100% em Python:***
-
+[![NPM](http://img.shields.io/npm/l/react)](https://github.com/MayconCoutinho/Leitor_de_MP3_Python/blob/main/LICENSE)
 &nbsp;
 
+
 ![Mobile 1](https://github.com/MayconCoutinho/Leitor_de_MP3_Python/blob/main/Anima%C3%A7%C3%A3o.gif)
+
+
+
 
 &nbsp;
 
