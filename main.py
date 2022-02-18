@@ -11,6 +11,12 @@ from random import shuffle
 
 ################# Diretório ###########################
 
+"""
+    # Ler todos os arquivos dentro da pasta "./Music", indentifica o nome de cada arquivo e põem na variável musica.
+    # Ler todos os arquivos dentro da pasta "./Images/img_musica/", indentifica o nome de cada arquivo e põem na variável capa_musica.  
+
+"""
+
 pasta_musica = './Music'
 musica = []
 
@@ -27,6 +33,12 @@ for diretorio, subpastas, arquivos in os.walk(pasta_capa):
         capa_musica.append(os.path.join(diretorio, arquivo))
 
 ###################################### configurações inicial #################################
+
+"""
+    # Inicia a primeira musica a ser tocada e rapidamente deixa a musica em pause pronto para despausar.
+    # Configurações da dimensão e background
+
+"""
 
 len_musica = int(len(musica)-1)
 
@@ -56,11 +68,17 @@ root.iconbitmap('./images/icon/ico_music.ico')
 
 def nome_musica():
     
-    nome_musica =  (musica[num_musica].replace('.mp3','')).replace('./Music\\','')
+    nome_musica =  (musica[num_musica].replace('.mp3','')).replace('./Music\\','')  # Excluir strings indesejados como o "diretorio" da musica e o ".mp3".
 
-    nome_musica = Label(root, text= nome_musica, font=("Corbel 12"), foreground='white' ,background='#000000').place(x=-15,y=290, width=400, height=25)
+    nome_musica = Label(root, text= nome_musica, font=("Corbel 12"), foreground='white' ,background='#000000').place(x=-15,y=290, width=400, height=25) # Exibi o nome da musica.  
 
 ###################################### Capa musica ######################################
+
+"""
+    # Seleciona a capa da musica de acordo com o nome da musica, através de comparação de nome.
+    # Exibe a capa da musica quando a musica é trocada. 
+
+"""
 
 def replace_nome(retorna, diretorio):
 
@@ -114,7 +132,7 @@ logo_label = Label(image=logo, border=2)
 logo_label.image = logo
 logo_label.place(x=50, y=30)
 
-def muda_capa():
+def muda_capa():  
     
     musica_capa_certa()
     logo = Image.open(musica_capa_certa_on)
@@ -124,6 +142,13 @@ def muda_capa():
     logo_label.place(x=50, y=30)
 
 ###################################### Funções ##############################################
+
+"""
+    # Linha branca e cinza de progresso da musica.
+    # Tempo total da musica e quanto tempo esta tocando.
+    # Botões de midia (play,pause,avançar...).
+    
+"""
 
 musica_on = False
 
