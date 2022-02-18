@@ -9,7 +9,6 @@ from time import sleep
 from random import shuffle
 
 
-
 ################# Diretório ###########################
 
 pasta_musica = './Music'
@@ -17,7 +16,6 @@ musica = []
 
 pasta_capa = "./Images/img_musica/" 
 capa_musica = []
-
 
 for diretorio, subpastas, arquivos in os.walk(pasta_musica):
     for arquivo in arquivos:
@@ -29,8 +27,6 @@ for diretorio, subpastas, arquivos in os.walk(pasta_capa):
         capa_musica.append(os.path.join(diretorio, arquivo))
 
 ###################################### configurações inicial #################################
-
-
 
 len_musica = int(len(musica)-1)
 
@@ -60,7 +56,6 @@ root.iconbitmap('./images/icon/ico_music.ico')
 
 def nome_musica():
     
-  
     nome_musica =  (musica[num_musica].replace('.mp3','')).replace('./Music\\','')
 
     nome_musica = Label(root, text= nome_musica, font=("Corbel 12"), foreground='white' ,background='#000000').place(x=-15,y=290, width=400, height=25)
@@ -81,16 +76,15 @@ def replace_nome(retorna, diretorio):
         nome_imagem_1 =  (nome_imagem_1.replace('./Images/img_musica/','')).replace('.jpg','')
 
         return nome_imagem_1
-    
 
 def nomes_limpo(musica_capa, retorna):
 
     if retorna == "musica":
         nome_musica_1 = (musica_capa.replace('.mp3','')).replace('./Music\\','')
         return nome_musica_1
+    
     if retorna == "capa":
         nome_capa_1 = (musica_capa.replace('./Images/img_musica/','')).replace('.jpg','')
-
         return nome_capa_1
 
 contador = 0 
@@ -101,16 +95,10 @@ def musica_capa_certa():
     
     capa_generica = "./Images/img_musica/Capa_generica.jpg"
 
-
     musica_capa_certa_on = capa_generica
 
-    
-
-    for capa in capa_musica:
-        
-
+    for capa in capa_musica:     
         if nomes_limpo(capa,"capa") == nomes_limpo(musica[num_musica], "musica"):
-
             musica_capa_certa_on = capa
             contador = 0
             break
@@ -125,7 +113,6 @@ logo = ImageTk.PhotoImage(logo.resize((250,250)))
 logo_label = Label(image=logo, border=2)
 logo_label.image = logo
 logo_label.place(x=50, y=30)
-
 
 def muda_capa():
     
@@ -199,68 +186,42 @@ def tempo_musica_str():
 
     segundo_2 = segundo_1
 
-
-
     if musica_on == True:
 
-        linha_branca += 300/musica_tempo_total(musica[num_musica], "bruto")
-        
-    
-
+        linha_branca += 300/musica_tempo_total(musica[num_musica], "bruto")    
 
     linha = Label(root, text= ' ', background= '#ffffff')
     linha.place(x=20, y=325, width= linha_branca, height= 5)
     
-
-
-
-
-
-
-
     if segundo_1 == 0 and segundo_1_on == True:
-
         segundo = 0   
         segundo_1_on = False
 
         if segundo_1 == 0:
             minuto += 1
 
-
-    
-  
     if segundo_1_on == False:
-
         segundo_2 = 59 - int(segundo)
         
         if segundo_2 == 0:
             minuto += 1
             segundo = 0
-
-    
-        
-
+            
     if segundo_2 > 0:
         if musica_on == True:
             segundo += 1 
 
     if segundo_2 <= 0 and minuto_1 <= 0:
-
         linha_cinza()
         passa_musica("")
 
-
-
-    
     tempo_texto = Label(root, text= ' ', foreground='white', background='#000000')
     tempo_texto.place(x=285, y=299, width= 50, height= 20)
- 
     tempo_formato = "{:02d}:{:02d}".format(minuto_1, segundo_2)
 
     sleep(0.1)
     
     tempo_texto.config(text=tempo_formato)
-
 
     root.after(900, tempo_musica_str)
 
@@ -273,7 +234,7 @@ def volume_aumenta(_):
 altura = 0.3
 mixer.music.set_volume(altura)
 
-def volume_str(mensagem = altura):
+def volume_str(mensagem = altura): 
     global altura
     
     volume_1 = altura 
@@ -302,13 +263,10 @@ def volume(volume):
     elif volume == 0.1:
         if altura >= 1.0:
             altura = 1.0
-
         elif altura >= 0: 
             altura = ((altura * 10) + 1)/10
-
-        
+            
     volume_str()
-
     
     mixer.music.set_volume(altura) # vai de 0 a 1.0
   
@@ -318,39 +276,27 @@ def musica_aleatoria(_):
 
     global musica_aleatoria_on
  
-
     if musica_aleatoria_on == True:
-        
         musica_aleatoria_on = False
-
         b_musica_aleatoria.config(image=photo_musica_aleatoria)
 
     elif musica_aleatoria_on == False:
-
         shuffle(musica)
-
         musica_aleatoria_on = True
-
         b_musica_aleatoria.config(image=photo_musica_aleatoria_cinza)
 
 def ultima_musica():
-
     return 0
 
 def primeira_musica():
-
     return len_musica
 
 def tocar_musica():
-
     pygame.mixer.init()
-
     pygame.mixer.music.load(musica[num_musica])
-
     pygame.mixer.music.play()
 
 def retorna_f(retorna):
-
     global musica_on
     
     if retorna == False:
@@ -359,7 +305,6 @@ def retorna_f(retorna):
         musica_on = False
 
 def numero_igual():
-
     global num_musica_2
 
     num_musica_2 = num_musica
@@ -367,21 +312,16 @@ def numero_igual():
 cronomitro_ativado = False
 
 def play(_):
-
     global cronomitro_ativado
-
 
     nome_musica()
 
     if musica_on == True:
-
         b_play.config(image=photo_pause)
         mixer.music.pause()
-        
         retorna_f(True)   
 
     elif musica_on == False:
-
         b_play.config(image=photo_play)
         mixer.music.unpause()
         retorna_f(False)
@@ -392,24 +332,19 @@ def play(_):
         cronomitro_ativado = True
 
 def passa_musica(_):
-
     global num_musica, minuto, segundo , cronomitro_ativado, segundo_1_on
-
 
     segundo_1_on = True
 
     minuto = 0
     segundo = 0
 
-
     if num_musica >= len_musica:
-
         if musica_aleatoria_on == True:
             shuffle(musica)
 
         num_musica = ultima_musica()        
         b_play.config(image=photo_play)
-
   
         retorna_f(False)
         nome_musica()
@@ -417,30 +352,27 @@ def passa_musica(_):
         
         tocar_musica()
         linha_cinza()
-
-       
-        
-
+      
     elif num_musica >= 0 and num_musica < len_musica:
         if musica_aleatoria_on == True:
             shuffle(musica)
         
         num_musica += 1 
+        
         b_play.config(image=photo_play)
         retorna_f(False)
+        
         nome_musica()
         muda_capa()
    
         tocar_musica()
         linha_cinza()
     
-
     if cronomitro_ativado == False:
         musica_cronometro()
         cronomitro_ativado = True
          
 def volta_musica(_):
-    
     global num_musica , cronomitro_ativado, segundo_1_on 
 
     segundo_1_on = True
@@ -448,7 +380,6 @@ def volta_musica(_):
     if num_musica <= 0:
         if musica_aleatoria_on == True:
             shuffle(musica)
-
         
         num_musica = primeira_musica()
 
@@ -462,8 +393,6 @@ def volta_musica(_):
         
         tocar_musica()
         linha_cinza()
-
-    
 
     elif num_musica > 0 and num_musica <= len_musica:
         if musica_aleatoria_on == True:
