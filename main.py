@@ -67,7 +67,7 @@ root.iconbitmap('./images/icon/ico_music.ico')
 def nome_musica():
     
     nome_musica =  (musica[num_musica].replace('.mp3','')).replace('./Music\\','')  # Excluir strings indesejados como o "diretorio" da musica e o ".mp3".
-
+    
     nome_musica = Label(root, text= nome_musica, font=("Corbel 12"), foreground='white' ,background='#000000').place(x=-15,y=290, width=400, height=25) # Exibi o nome da musica.  
 
 ###################################### Capa musica ######################################
@@ -79,7 +79,7 @@ def nome_musica():
 """
 
 def replace_nome(retorna, diretorio):
-
+    
     if retorna == "musica":
 
         nome_musica_1 = diretorio
@@ -106,7 +106,6 @@ def nomes_limpo(musica_capa, retorna):
 contador = 0 
 
 def musica_capa_certa():
-
     global musica_capa_certa_on, contador
     
     capa_generica = "./Images/img_musica/Capa_generica.jpg"
@@ -151,7 +150,6 @@ def muda_capa():
 musica_on = False
 
 def linha_cinza():
-
     global linha_branca
 
     linha_branca = 0
@@ -164,12 +162,11 @@ minuto = 0
 segundo = 0
 
 def musica_cronometro():
-
     if musica_on == True:
         tempo_musica_str()
 
 def musica_tempo_total(diretorio, retorna):
-
+    
     from email.mime import audio
     from mutagen.mp3 import MP3
 
@@ -197,7 +194,6 @@ def musica_tempo_total(diretorio, retorna):
 segundo_1_on = True
 
 def tempo_musica_str():
-
     global minuto, segundo, segundo_1_on, linha_branca, musica_on
 
     minuto_1 = musica_tempo_total(musica[num_musica], "minuto")
