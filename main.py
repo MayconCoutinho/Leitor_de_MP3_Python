@@ -36,7 +36,7 @@ for diretorio, subpastas, arquivos in os.walk(pasta_capa):
 
 """
     # Inicia a primeira musica a ser tocada e rapidamente deixa a musica em pause pronto para despausar.
-    # Configurações da dimensão e background
+    # Configurações da dimensão e background.
 
 """
 
