@@ -27,7 +27,6 @@ for diretorio, subpastas, arquivos in os.walk(pasta_musica):
     for arquivo in arquivos:
         musica.append(os.path.join(diretorio, arquivo))
 
-
 for diretorio, subpastas, arquivos in os.walk(pasta_capa):
     for arquivo in arquivos:
         capa_musica.append(os.path.join(diretorio, arquivo))
@@ -54,7 +53,6 @@ root = Tk()
 root.geometry("350x420")
 root.configure(bg='black')
 root.resizable(width=False, height=False)
-
 
 ###################################### Nome do programa ######################################
 
@@ -274,9 +272,7 @@ def volume_str(mensagem = altura):
 volume_str()
 
 def volume(volume):
-
     global altura
-
 
     if volume == -0.1:
         if altura <= 0:
@@ -298,7 +294,6 @@ def volume(volume):
 musica_aleatoria_on = False
 
 def musica_aleatoria(_):
-
     global musica_aleatoria_on
  
     if musica_aleatoria_on == True:
@@ -414,8 +409,7 @@ def volta_musica(_):
 
         nome_musica()
         muda_capa()
-        
-        
+             
         tocar_musica()
         linha_cinza()
 
