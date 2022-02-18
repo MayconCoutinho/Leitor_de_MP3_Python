@@ -81,16 +81,13 @@ def nome_musica():
 def replace_nome(retorna, diretorio):
     
     if retorna == "musica":
-
         nome_musica_1 = diretorio
         nome_musica_1 =  (nome_musica_1.replace('.mp3','')).replace('./Music\\','')
         return nome_musica_1
 
     elif retorna == "imagem":    
-
         nome_imagem_1 = diretorio
         nome_imagem_1 =  (nome_imagem_1.replace('./Images/img_musica/','')).replace('.jpg','')
-
         return nome_imagem_1
 
 def nomes_limpo(musica_capa, retorna):
@@ -206,7 +203,6 @@ def tempo_musica_str():
     segundo_2 = segundo_1
 
     if musica_on == True:
-
         linha_branca += 300/musica_tempo_total(musica[num_musica], "bruto")    
 
     linha = Label(root, text= ' ', background= '#ffffff')
@@ -273,7 +269,6 @@ def volume(volume):
     if volume == -0.1:
         if altura <= 0:
             altura = 0
-
         elif altura <= 1.0: 
             altura = ((altura * 10) - 1)/10
 
@@ -295,7 +290,7 @@ def musica_aleatoria(_):
     if musica_aleatoria_on == True:
         musica_aleatoria_on = False
         b_musica_aleatoria.config(image=photo_musica_aleatoria)
-
+        
     elif musica_aleatoria_on == False:
         shuffle(musica)
         musica_aleatoria_on = True
