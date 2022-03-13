@@ -124,16 +124,20 @@ logo = ImageTk.PhotoImage(logo.resize((250,250)))
 
 logo_label = Label(image=logo, border=2)
 logo_label.image = logo
-logo_label.place(x=50, y=30)
+logo_label.pack(padx=20, pady=30)
 
-def muda_capa():  
+def muda_capa():   
+    global logo_label
+
+    logo_label.destroy()
     
     musica_capa_certa()
+    
     logo = Image.open(musica_capa_certa_on)
     logo = ImageTk.PhotoImage(logo.resize((250,250)))
     logo_label = Label(image=logo, border=2)
     logo_label.image = logo
-    logo_label.place(x=50, y=30)
+    logo_label.pack(padx=20, pady=30)
 
 ###################################### Funções ##############################################
 
